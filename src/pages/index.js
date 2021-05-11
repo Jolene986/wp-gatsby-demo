@@ -14,6 +14,7 @@ const IndexPage = () => {
   `);
   return (
     <div>
+      <h2 style={{ color: "magenta" }}> {"from gatsby"}</h2>
       {dataTest.allWpPost.nodes.map((item) => (
         <p key={item.title}>{item.title}</p>
       ))}
