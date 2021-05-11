@@ -33,7 +33,7 @@ module.exports = {
         url: `${process.env.WP_API_URL}`,
         type: {
           __all: {
-            limit: process.env.NODE_ENV === `development` ? 50 : null,
+            limit: 50, //process.env.NODE_ENV === `development` ? 50 : null
           },
         },
       },
