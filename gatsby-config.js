@@ -31,9 +31,10 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `${process.env.WP_API_URL}`,
+        refetchInterval: 60, // revome in production
         type: {
           __all: {
-            limit: 50, //process.env.NODE_ENV === `development` ? 50 : null
+            limit: process.env.NODE_ENV === `development` ? 50 : null,
           },
         },
       },
